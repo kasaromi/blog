@@ -8,13 +8,10 @@ Welcome to Kasaromi blog.
 
 ## How we are going to do it
 
-**Home Page**
 ![kasaromi blog](https://cloud.githubusercontent.com/assets/2573931/13435951/c880ad9a-dfd4-11e5-824c-98d5a0bbe493.png)
 
-**Team Page**
 ![new mockup 2](https://cloud.githubusercontent.com/assets/2573931/13435943/c36b57c4-dfd4-11e5-80a2-548b3e2f314b.png)
 
-**Admin Page**
 ![new mockup 3](https://cloud.githubusercontent.com/assets/2573931/13435945/c389b430-dfd4-11e5-9c63-9f57efebd24b.png)
 
 We only will have 3 pages, the home page, the team page and the Admin page.
