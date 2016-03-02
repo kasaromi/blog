@@ -4,6 +4,7 @@
   "description": "Blog using redisdb and Hapijs",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/server.js",
     "test": "tape ./test/*",
     "coverage": "istanbul cover tape ./test/*"
   },
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/kasaromi/blog#readme",
   "dependencies": {
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
     "handlebars": "^4.0.5",
     "hapi": "^13.0.0",
     "inert": "^3.2.0",

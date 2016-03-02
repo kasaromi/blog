@@ -6,6 +6,7 @@ var inert = require('inert');
 var vision = require('vision');
 var handlebars = require('handlebars');
 var good = require('good');
+var redis = require('./redis.js');
 
 var plugins = [
     inert,
@@ -47,6 +48,21 @@ server.register(plugins, function(err) {
         path: '/team',
         handler: function(request, reply) {
             reply.view('team');
+        }
+    },
+    {
+        method: 'GET',
+        path: '/login',
+        handler: function(request, reply) {
+            reply.view('login');
+        }
+    },
+    {
+        method: 'POST',
+        path: '/login/{username*}',
+        handler: function(request, reply) {
+            console.log('---------' + request.prams);
+
         }
     },
     {
