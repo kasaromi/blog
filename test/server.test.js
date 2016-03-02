@@ -1,5 +1,5 @@
 var tape = require('tape');
-var server = require('../server/server.js');
+var server = require('../server/home.js');
 
 tape("home page responds with 200 status", function(t){
     server.inject( {method: 'GET', url: '/'}, function( res ) {
