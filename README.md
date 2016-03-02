@@ -1,4 +1,4 @@
-[![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/crystalise/mypitit/kasaromi/blog)
+[![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/crystalise/kasaromi/blog/master)
 [![codecov.io](https://codecov.io/github/kasaromi/blog/coverage.svg?branch=master)](https://codecov.io/github/kasaromi/blog?branch=master)
 [![Build Status](https://travis-ci.org/kasaromi/blog.svg?branch=master)](https://travis-ci.org/kasaromi/blog)
 
