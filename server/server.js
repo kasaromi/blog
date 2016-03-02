@@ -69,6 +69,16 @@ server.register(plugins, function(err) {
         path: '/login/{user*}',
         handler: function(request, reply) {
             console.log('---------' + request.params.user);
+
+        }
+    },
+    {
+        method: 'POST',
+        path: '/admin/{post*}',
+        handler: function(request, reply) {
+            console.log('hi');
+            console.log('---------' + request.params.post);
+
         }
     },
     {
