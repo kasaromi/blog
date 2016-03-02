@@ -6,7 +6,6 @@ function createUser(){
     console.log(user, password);
     var xhr = new XMLHttpRequest();
     function send(user, password){
-        console.log('hi');
         xhr.open('post', '/login/username=' + user + '&password=' + password);
         xhr.send();
     }
