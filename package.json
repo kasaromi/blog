@@ -24,7 +24,6 @@
     "vision": "^4.0.1"
   },
   "devDependencies": {
-    "codecov": "^1.0.1",
     "istanbul": "^0.4.2",
     "tape": "^4.4.0"
   },
