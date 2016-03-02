@@ -4,7 +4,8 @@
   "description": "Blog using redisdb and Hapijs",
   "main": "index.js",
   "scripts": {
-    "test": "tape ./test/*"
+    "test": "tape ./test/*",
+    "coverage": "istanbul cover tape ./test/*"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "codecov": "^1.0.1",
+    "istanbul": "^0.4.2",
     "tape": "^4.4.0"
   },
   "jshintConfig": {
