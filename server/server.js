@@ -40,6 +40,13 @@ server.register(plugins, function(err) {
         }
     },
     {
+        method: "GET",
+        path: "/admin",
+        handler: function(request, reply) {
+            reply.view('admin');
+        }
+    },
+    {
         method: 'GET',
         path: '/{param*}',
         handler: {
