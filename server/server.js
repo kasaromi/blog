@@ -77,8 +77,13 @@ server.register(plugins, function(err) {
         path: '/admin/{post*}',
         handler: function(request, reply) {
             console.log('hi');
-            console.log('---------' + request.params.post);
-
+            console.log('---------' + request.params.post); //title=sam&postArea=hi
+            var date = Date.now();
+            var arr = request.params.post.split('title=')[1].split('&postArea=');//['sam', 'hi'];
+            var title = arr[0];
+            var post = arr[1];
+            var author = 'author';
+            redis.setPost('blogPosts', title, post, author);
         }
     },
     {
