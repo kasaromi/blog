@@ -5,15 +5,25 @@ var server = new Hapi.Server();
 var inert = require('inert');
 var vision = require('vision');
 var handlebars = require('handlebars');
+var good = require('good');
 
 var plugins = [
     inert,
-    vision
+    vision,
+    {register: good,
+    options: goodOptions}
 ];
 
 server.connection({
     port: 3000
 });
+
+var goodOptions = {
+    reporters: [{
+        reporter: require('good-console'),
+        events: {response: '*'}
+    }]
+};
 
 server.register(plugins, function(err) {
 
