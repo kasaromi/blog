@@ -1,32 +1,32 @@
 {
-    "name": "blog",
-    "version": "1.0.0",
-    "description": "Blog using redisdb and Hapijs",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kasaromi/blog.git"
-    },
-    "author": "kasaromi",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/kasaromi/blog/issues"
-    },
-    "homepage": "https://github.com/kasaromi/blog#readme",
-    "dependencies": {
-        "handlebars": "^4.0.5",
-        "hapi": "^13.0.0",
-        "inert": "^3.2.0",
-        "vision": "^4.0.1"
-    },
-    "devDependencies": {
-        "tape": "^4.4.0"
-    },
-    "jshintConfig": {
-        "node": true,
-        "esnext": true
-    }
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Blog using redisdb and Hapijs",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape ./test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasaromi/blog.git"
+  },
+  "author": "kasaromi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasaromi/blog/issues"
+  },
+  "homepage": "https://github.com/kasaromi/blog#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "hapi": "^13.0.0",
+    "inert": "^3.2.0",
+    "vision": "^4.0.1"
+  },
+  "devDependencies": {
+    "tape": "^4.4.0"
+  },
+  "jshintConfig": {
+      "node": true,
+      "esnext": true
+  }
 }
