@@ -59,10 +59,9 @@ server.register(plugins, function(err) {
     },
     {
         method: 'POST',
-        path: '/login/{username*}',
+        path: '/login/{user*}',
         handler: function(request, reply) {
-            console.log('---------' + request.prams);
-
+            console.log('---------' + request.params.user);
         }
     },
     {
