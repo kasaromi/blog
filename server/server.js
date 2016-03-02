@@ -5,15 +5,26 @@ var server = new Hapi.Server();
 var inert = require('inert');
 var vision = require('vision');
 var handlebars = require('handlebars');
+var good = require('good');
+var redis = require('./redis.js');
 
 var plugins = [
     inert,
-    vision
+    vision,
+    {register: good,
+    options: goodOptions}
 ];
 
 server.connection({
     port: 3000
 });
+
+var goodOptions = {
+    reporters: [{
+        reporter: require('good-console'),
+        events: {response: '*'}
+    }]
+};
 
 server.register(plugins, function(err) {
 
@@ -44,6 +55,20 @@ server.register(plugins, function(err) {
         path: "/admin",
         handler: function(request, reply) {
             reply.view('admin');
+        }
+    },
+    {
+        method: 'GET',
+        path: '/login',
+        handler: function(request, reply) {
+            reply.view('login');
+        }
+    },
+    {
+        method: 'POST',
+        path: '/login/{user*}',
+        handler: function(request, reply) {
+            console.log('---------' + request.params.user);
         }
     },
     {
