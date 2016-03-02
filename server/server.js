@@ -38,6 +38,17 @@ server.register(plugins, function(err) {
         handler: function(request, reply) {
             reply.view('team');
         }
+    },
+    {
+        method: 'GET',
+        path: '/{param*}',
+        handler: {
+            directory: {
+                path: 'public/css',
+                redirectToSlash: true,
+                index: true
+            }
+        }
     }
 ]);
 });
