@@ -23,10 +23,11 @@
     "vision": "^4.0.1"
   },
   "devDependencies": {
+    "codecov": "^1.0.1",
     "tape": "^4.4.0"
   },
   "jshintConfig": {
-      "node": true,
-      "esnext": true
+    "node": true,
+    "esnext": true
   }
 }
