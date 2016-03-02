@@ -44,7 +44,7 @@ server.register(plugins, function(err) {
         path: '/{param*}',
         handler: {
             directory: {
-                path: 'public/css',
+                path: 'public',
                 redirectToSlash: true,
                 index: true
             }
