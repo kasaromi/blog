@@ -1,7 +1,9 @@
 var tape = require('tape');
 var server = require('../server/server.js');
 
-tape("test", function(t){
-        t.equal(server.test(5), 10);
+tape("home page responds with 200 status", function(t){
+    server.inject( {method: 'GET', url: '/'}, function( res ) {
+        t.equal( res.statusCode, 200, "checks code is 200");
         t.end();
+    });
 });

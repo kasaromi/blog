@@ -30,6 +30,11 @@ server.register(plugins, function(err) {
         path: '/',
         handler: function(request, reply) {
             reply.view('home');
+        },
+        method: 'GET',
+        path: '/team',
+        handler: function(request, reply) {
+            reply.view('team');
         }
     }]);
 });
