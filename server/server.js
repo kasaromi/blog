@@ -51,6 +51,13 @@ server.register(plugins, function(err) {
         }
     },
     {
+        method: "GET",
+        path: "/admin",
+        handler: function(request, reply) {
+            reply.view('admin');
+        }
+    },
+    {
         method: 'GET',
         path: '/login',
         handler: function(request, reply) {
