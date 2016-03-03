@@ -1,16 +1,28 @@
+<<<<<<< HEAD
+<h1>home</h1>
+<!-- <div class="splash-container">
+    <img src="https://www.planwallpaper.com/static/images/abstract-colourful-cool-wallpapers-55ec7905a6a4f.jpg" alt="splash-image" />
+</div> -->
+=======
 <h1>Kasaromi</h1>
 <div id="petal-stage-wrap" class="petal-stage-wrap">
     <div id="petal-stage" class="petal-stage"></div>
 </div>
+>>>>>>> master
 <div class="blog-container">
     <article>
 
         <div class="post-title-container">
 
-           <div class="title">
-              <h2>This is the title</h2>
-              <p class="post-date">20/01/2016</p>
-              <p class="author">This is the author</p>
+            <div class="title">
+                <h2>This is the title</h2>
+                    {{#each blah}}
+                        <h1>{{this.title}}</h1>
+                        <p>{{this.post}}</p>
+                        <p>{{this.author}}</p>
+                    {{/each}}
+                  <p class="post-date">20/01/2016</p>
+                  <p class="author">This is the author</p>
            </div>
         </div>
 
@@ -27,4 +39,5 @@
             <p>See More ...</p>
         </div>
     </article>
+    <script src="/homescript.js"></script>
 </div>
