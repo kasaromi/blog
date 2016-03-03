@@ -40,7 +40,9 @@ server.register(plugins, function(err) {
         method: 'GET',
         path: '/',
         handler: function(request, reply) {
-            reply.view('home');
+            var posts = 'whhaaat?';
+            reply(request.payload);
+            // reply.view('home', {title: 'blogPosts', posts: posts});
         }
     },
     {

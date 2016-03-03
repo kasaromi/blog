@@ -1,4 +1,5 @@
 var tape = require('tape');
+var redis = require('../server/redis.js');
 var server = require('../server/server.js');
 
 tape("home page responds with 200 status", function(t){
@@ -32,5 +33,6 @@ tape('admin page responds with 200 status', function(t) {
 
 tape('teardown', function(t) {
     server.stop();
+    redis.client.quit();
     t.end();
 });

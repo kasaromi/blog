@@ -22,9 +22,19 @@ function setPost(cli, title, post, author){
     client.hset(cli, Date.now(), obj);
 }
 
+function getPosts(cli, callback){
+    client.hgetall(cli, function(err, reply){
+        if(err){
+            console.log(err);
+        }
+        else{callback(reply);}
+    });
+}
+
 module.exports = {
     setInfo: setInfo,
     getInfo: getInfo,
     setPost: setPost,
+    getPosts: getPosts,
     client: client
 };
