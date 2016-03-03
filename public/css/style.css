@@ -99,7 +99,8 @@ h1 {
   margin: 0;
   text-align: center;
   color: #490a3d;
-  font-size: 3em; }
+  font-size: 3em;
+  letter-spacing: 20px; }
 
 .blog-container {
   padding-top: 10em;
