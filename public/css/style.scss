@@ -52,13 +52,20 @@ ul li {
 }
 
 #login {
+    margin-top: 20px;
+}
+
+button {
     padding: 5px 20px;
     border-radius: 5px;
     background-color: $orange;
     border: none;
     font-size: 1em;
-    margin-top: 20px;
+    margin-top: -6px;
     color: $font;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .petal-stage-wrap {
@@ -197,4 +204,24 @@ h2 {
 p {
     font-size: 1.3em;
 }
+
+.form-container {
+    margin: 11%;
+    background-color: $yellow;
+    border-radius: 10px;
+}
+
 /*# sourceMappingURL=style.scss.map */
+
+.title {
+    width: 200px;
+    margin: 0px auto 4px auto;
+}
+
+.text {
+    margin: 0px auto 20px auto;
+    width: 80%;
+}
+.blog-form {
+    padding: 20px;
+}
