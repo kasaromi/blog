@@ -14,8 +14,17 @@ function getInfo(name, callback){
     });
 }
 
+function setPost(cli, title, post, author){
+    var obj = {};
+    obj.title = title;
+    obj.post = post;
+    obj.author = author;
+    client.hset(cli, Date.now(), obj);
+}
+
 module.exports = {
     setInfo: setInfo,
     getInfo: getInfo,
+    setPost: setPost,
     client: client
 };
