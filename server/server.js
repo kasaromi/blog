@@ -7,11 +7,15 @@ var vision = require('vision');
 var handlebars = require('handlebars');
 var bcrypt = require('bcrypt');
 var basic = require('hapi-auth-basic');
+var good = require('good');
+var redis = require('./redis.js');
 
 var plugins = [
     inert,
     vision,
-    basic
+    basic,
+    {register: good,
+    options: goodOptions}
 ];
 
 server.connection({
@@ -29,6 +33,12 @@ var validate = function (request, username, password, callback) {
     bcrypt.compare(password, users[username], function(err, isValid) {
         callback(err, isValid, { username: username });
     });
+};
+var goodOptions = {
+    reporters: [{
+        reporter: require('good-console'),
+        events: {response: '*'}
+    }]
 };
 
 server.register(plugins, function(err) {
@@ -70,6 +80,35 @@ server.register(plugins, function(err) {
             handler: function (request, reply) {
                 reply.view('admin');
             }
+        }
+    },
+    {
+        method: 'GET',
+        path: '/login',
+        handler: function(request, reply) {
+            reply.view('login');
+        }
+    },
+    {
+        method: 'POST',
+        path: '/login/{user*}',
+        handler: function(request, reply) {
+            console.log('---------' + request.params.user);
+
+        }
+    },
+    {
+        method: 'POST',
+        path: '/admin/{post*}',
+        handler: function(request, reply) {
+            console.log('hi');
+            console.log('---------' + request.params.post); //title=sam&postArea=hi
+            var date = Date.now();
+            var arr = request.params.post.split('title=')[1].split('&postArea=');//['sam', 'hi'];
+            var title = arr[0];
+            var post = arr[1];
+            var author = 'author';
+            redis.setPost('blogPosts', title, post, author);
         }
     },
     {
