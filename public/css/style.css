@@ -99,8 +99,74 @@ h1 {
   padding-top: 10em;
   color: #490a3d; }
 
-.profile-container {
+.grid {
+  margin: 5% 10%;
+  width: 100%;
+  clear: both;
+  padding: 20px; }
+
+.column-6 {
+  display: block;
+  float: left;
+  width: 39.99%; }
+
+.flip-container {
+  perspective: 1000;
+  display: block;
+  width: 500px;
+  margin: 30px;
   color: #490a3d; }
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg); }
+
+.flip-container, .front, .back {
+  width: 400px;
+  height: 400px; }
+
+.front img {
+  width: 400px;
+  height: 400px; }
+
+h2 {
+  font-size: 2em;
+  color: #f8ca00; }
+
+.social-icons img {
+  fill: #bd1550;
+  width: 50px;
+  height: 50px;
+  padding-left: 77px; }
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative; }
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  padding: 10px; }
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg); }
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+  background-color: #bd1550; }
+
+p {
+  font-size: 1.3em; }
 
 /*# sourceMappingURL=style.scss.map */
 
