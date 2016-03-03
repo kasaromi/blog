@@ -1,5 +1,106 @@
 body {
-  background-color: rgb(90, 228, 116); }
+  background-color: #e97f02;
+  margin: 0; }
+
+* {
+  font-family: 'Alegreya Sans', sans-serif; }
+
+a {
+  text-decoration: none;
+  font-size: 2em;
+  color: #f8ca00;
+  cursor: pointer; }
+
+ul li {
+  list-style: none;
+  display: inline-table;
+  padding-right: 3em;
+  vertical-align: middle;
+  height: 28px;
+  margin-top: 90px; }
+
+.navbar {
+  background-color: #bd1550;
+  width: 100%;
+  height: 172px;
+  margin-top: -27px;
+  z-index: 999; }
+
+.logo {
+  float: left;
+  margin-left: 40px;
+  width: 4em;
+  margin: 50px 47px; }
+
+.menu {
+  float: right;
+  margin-right: 60px; }
+
+.login-div {
+  float: right;
+  margin-right: -380px;
+  margin-top: 15px; }
+
+#login {
+  padding: 5px 20px;
+  border-radius: 5px;
+  background-color: #e97f02;
+  border: none;
+  font-size: 1em;
+  margin-top: 20px;
+  color: #490a3d; }
+
+.petal-stage-wrap {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e97f02;
+  padding-top: 6em; }
+
+.petal-stage {
+  position: relative; }
+
+.petal-model {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  .petal-model img {
+    width: 100%; }
+
+.petal-model-s {
+  width: 14px;
+  z-index: 99998; }
+
+.petal-model-m {
+  width: 22px;
+  z-index: 99999; }
+
+.petal-model-l {
+  width: 30px;
+  z-index: 100001; }
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+  transform: translate3d(-50%, 40%, 0);
+  margin: 0;
+  text-align: center;
+  color: #490a3d;
+  font-size: 3em; }
+
+.blog-container {
+  padding-top: 10em;
+  color: #490a3d; }
+
+.profile-container {
+  color: #490a3d; }
 
 /*# sourceMappingURL=style.scss.map */
 
