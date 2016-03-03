@@ -3,14 +3,19 @@
     <img src="https://www.planwallpaper.com/static/images/abstract-colourful-cool-wallpapers-55ec7905a6a4f.jpg" alt="splash-image" />
 </div> -->
 <div class="blog-container">
-    <!-- <article>
+    <article>
 
         <div class="post-title-container">
 
-           <div class="title">
-              <h2>This is the title</h2>
-              <p class="post-date">20/01/2016</p>
-              <p class="author">This is the author</p>
+            <div class="title">
+                <h2>This is the title</h2>
+                    {{#each blah}}
+                        <h1>{{this.title}}</h1>
+                        <p>{{this.post}}</p>
+                        <p>{{this.author}}</p>
+                    {{/each}}
+                  <p class="post-date">20/01/2016</p>
+                  <p class="author">This is the author</p>
            </div>
         </div>
 
@@ -26,6 +31,6 @@
         <div class="btn">
             <p>See More ...</p>
         </div>
-    </article> -->
+    </article>
     <script src="/homescript.js"></script>
 </div>

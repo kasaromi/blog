@@ -40,9 +40,15 @@ server.register(plugins, function(err) {
         method: 'GET',
         path: '/',
         handler: function(request, reply) {
-            var posts = 'whhaaat?';
-            reply(request.payload);
-            // reply.view('home', {title: 'blogPosts', posts: posts});
+            redis.getKeys(function(r){
+                // console.log(r);//[123,435,567];
+                var arrOfObjects = [];
+                    redis.getAllPosts(function(rep){
+                        arrOfObjects = rep;
+                        console.log(arrOfObjects);
+                        reply.view('home', {blah: arrOfObjects});
+                });
+            });
         }
     },
     {
@@ -78,14 +84,19 @@ server.register(plugins, function(err) {
         method: 'POST',
         path: '/admin/{post*}',
         handler: function(request, reply) {
-            console.log('hi');
-            console.log('---------' + request.params.post); //title=sam&postArea=hi
-            var date = Date.now();
-            var arr = request.params.post.split('title=')[1].split('&postArea=');//['sam', 'hi'];
-            var title = arr[0];
-            var post = arr[1];
-            var author = 'author';
-            redis.setPost('blogPosts', title, post, author);
+            // var date = Date.now();
+            // var arr = request.params.post.split('title=')[1].split('&postArea=');//['sam', 'hi'];
+            // var title = arr[0];
+            // var post = arr[1];
+            // var author = 'author';
+            // redis.setPost('blogPosts', title, post, author);
+            var obj = {};
+            obj.date = Date.now();
+            var arr = request.params.post.split('title=')[1].split('&postArea=');//['today', 'hi'];
+            obj.titl = arr[0];
+            obj.post = arr[1];
+            obj.author = 'author';
+            redis.setPost(obj);
         }
     },
     {
