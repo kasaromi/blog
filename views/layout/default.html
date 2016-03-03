@@ -3,16 +3,27 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/css/style.css" charset="utf-8">
+        <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:500' rel='stylesheet' type='text/css'>
         <title>Kasaromi Blog</title>
     </head>
     <body>
-        <h2>Default</h2>
         <nav class="navbar">
-            <div class="nav-links">
-                <h3><a href="home.html">Home</a></h3>
-                <h3><a href="team.html">Team</a></h3>
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="/img/flower.svg" alt="" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a id="home" href="/">Home</a></li>
+                        <li><a id="team" href="/team">Team</a></h3>
+                    </ul>
+                </div>
+                <div class="login-div">
+                    <button id="login" type="button" name="button">Login</button>
+                </div>
             </div>
         </nav>
         {{{content}}}
+        <script type="text/javascript" src="/script.js"></script>
     </body>
 </html>
