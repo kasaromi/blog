@@ -67,9 +67,8 @@ tape('tests the getOnePost function', function(t){
 //     });
 // });
 
-
-tape('teardown', function(t) {
-    server.stop();
-    client.quit();
-    t.end();
-});
+// tape('teardown', function(t) {
+//     // server.stop();
+//     client.quit();
+//     t.end();
+// });
