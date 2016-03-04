@@ -16,9 +16,9 @@ tape('team page responds with 200 status', function(t) {
     });
 });
 
-tape('admin page responds with 200 status', function(t) {
+tape('admin page responds with 401 status', function(t) {
     server.inject({method: 'GET', url: '/admin'}, function(response) {
-        t.equal(response.statusCode, 200, 'Checks admin page code is 200');
+        t.equal(response.statusCode, 401, 'Checks admin page code is 401');
         t.end();
     });
 });
