@@ -3,7 +3,7 @@
 
 # Kasaromi blog
 
-Welcome to Kasaromi blog.
+Welcome to [Kasaromi blog](https://kasaromi-blog.herokuapp.com/).
 
 ## How we are going to do it
 
@@ -25,7 +25,6 @@ We only will have 3 pages, the home page, the team page and the Admin page.
 
 ## Stretch Goals
 Use this to add blog posts - https://www.tinymce.com/ or http://summernote.org/
-
 
 ### Resources
 * [Heroku](https://www.heroku.com/)
