@@ -102,26 +102,20 @@ server.register(plugins, function(err) {
         path: '/login/{user*}',
         handler: function(request, reply) {
             console.log('---------' + request.params.user);
-
         }
     },
     {
         method: 'POST',
         path: '/admin/{post*}',
         handler: function(request, reply) {
-            // var date = Date.now();
-            // var arr = request.params.post.split('title=')[1].split('&postArea=');//['sam', 'hi'];
-            // var title = arr[0];
-            // var post = arr[1];
-            // var author = 'author';
-            // redis.setPost('blogPosts', title, post, author);
+            var date = 'date' + Date.now();
             var obj = {};
-            obj.date = Date.now();
-            var arr = request.params.post.split('title=')[1].split('&postArea=');//['today', 'hi'];
+            var arr = request.params.post.split('title=')[1].split('&postArea=');
             obj.titl = arr[0];
             obj.post = arr[1];
             obj.author = 'author';
-            redis.setPost(obj);
+            obj.time = date;
+            redis.setPost(date, obj);
         }
     },
     {
