@@ -57,11 +57,9 @@ server.register(plugins, function(err) {
         path: '/',
         handler: function(request, reply) {
             redis.getKeys(function(r){
-                // console.log(r);//[123,435,567];
                 var arrOfObjects = [];
                     redis.getAllPosts(function(rep){
                         arrOfObjects = rep;
-                        console.log(arrOfObjects);
                         reply.view('home', {blah: arrOfObjects});
                 });
             });
@@ -102,7 +100,6 @@ server.register(plugins, function(err) {
         method: 'POST',
         path: '/login/{user*}',
         handler: function(request, reply) {
-            console.log('---------' + request.params.user);
         }
     },
     {
