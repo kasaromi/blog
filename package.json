@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/server.js",
     "test": "tape ./test/test.js",
-    "coverage": "istanbul cover tape ./test/*"
+    "coverage": "istanbul cover tape ./test/test.js"
   },
   "repository": {
     "type": "git",
