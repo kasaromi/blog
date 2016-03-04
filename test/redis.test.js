@@ -43,21 +43,23 @@ tape('tests if redis setPost function stores data correctly', function(t){
     client.keys('*', function(err, reply){
         if(err){throw err;}
         t.equal(reply.length, 0, '- db is reset correctly');
+        t.end();
     });
 });
 
-// tape('tests the getOnePost function', function(t){
-//     console.log('------');
-//     var date = 'date' + 1234;
-//     var title = 'today';
-//     var post = 'went to fac';
-//     var author = 'sam';
-//     var time = 1234;
-//     client.hmset(date, 'title', title);
-//     redisFunc.getOnePost(date, function(err, reply){
-//         t.equal(reply, 'hi', 'need help with this one guys!!!');
-//     });
-// });
+tape('tests the getOnePost function', function(t){
+    console.log('------');
+    var date = 'date' + 1234;
+    var title = 'today';
+    var post = 'went to fac';
+    var author = 'sam';
+    var time = 1234;
+    client.hmset(date, 'title', title);
+    redisFunc.getOnePost(date, function(err, reply){
+        t.equal(reply, 'hi', 'need help with this one guys!!!');
+        t.end();
+    });
+});
 
 // tape('tests getKeys function', function(t){
 //     redisFunc.getKeys(function(){
@@ -65,8 +67,9 @@ tape('tests if redis setPost function stores data correctly', function(t){
 //     });
 // });
 
+
 tape('teardown', function(t) {
-    // server.stop();
+    server.stop();
     client.quit();
     t.end();
 });
