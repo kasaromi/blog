@@ -43,6 +43,7 @@ tape('tests if redis setPost function stores data correctly', function(t){
     client.keys('*', function(err, reply){
         if(err){throw err;}
         t.equal(reply.length, 0, '- db is reset correctly');
+        t.end();
     });
 });
 
@@ -65,8 +66,8 @@ tape('tests if redis setPost function stores data correctly', function(t){
 //     });
 // });
 
-tape('teardown', function(t) {
-    // server.stop();
-    client.quit();
-    t.end();
-});
+// tape('teardown', function(t) {
+//     // server.stop();
+//     client.quit();
+//     t.end();
+// });

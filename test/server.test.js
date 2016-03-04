@@ -23,14 +23,6 @@ tape('admin page responds with 200 status', function(t) {
     });
 });
 
-// tape("does css load", function(t) {
-//     server.inject({method: 'GET', url: '/'}, function (res) {
-//         console.log(res);
-//         t.equal();
-//         t.end();
-//     });
-// });
-
 tape('teardown', function(t) {
     server.stop();
     redis.client.quit();
