@@ -64,3 +64,9 @@ tape('tests if redis setPost function stores data correctly', function(t){
 //
 //     });
 // });
+
+tape('teardown', function(t) {
+    // server.stop();
+    client.quit();
+    t.end();
+});
