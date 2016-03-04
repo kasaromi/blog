@@ -1,5 +1,5 @@
 var redis = require('redis');
-var client = redis.createClient();
+var client = redis.createClient(process.env.REDIS_URL);
 
 function setInfo(name, password){
     client.set(name, password);
