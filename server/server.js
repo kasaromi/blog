@@ -9,6 +9,7 @@ var bcrypt = require('bcrypt');
 var basic = require('hapi-auth-basic');
 var good = require('good');
 var redis = require('./redis.js');
+var port = process.env.PORT || 3000;
 
 var plugins = [
     inert,
@@ -19,7 +20,7 @@ var plugins = [
 ];
 
 server.connection({
-    port: 3000
+    port: port
 });
 
 var users = {
