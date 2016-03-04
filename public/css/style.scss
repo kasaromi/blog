@@ -123,6 +123,11 @@ h1 {
   width: 42%;
 }
 
+.blog-post {
+    width: 100%;
+    margin-top: -17%;
+}
+
 .blog-container {
     padding-top: 10em;
     color: $font;
@@ -164,7 +169,10 @@ h1 {
 
 h2 {
     font-size: 2em;
-    color: $pink;
+    color: $orange;
+    margin-top: 14%;
+    position: center;
+    margin-left: 6%;
 }
 
 .social-icons img {
@@ -205,6 +213,8 @@ h2 {
 
 p {
     font-size: 1.3em;
+    margin-left: 6%;
+    margin-right: 6%;
 }
 
 .form-container {
