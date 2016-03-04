@@ -36,7 +36,6 @@ function getOnePost (hash, callback){
 function getAllPosts(callback) {
     var arr = [];
     getKeys(function(r) {
-        // console.log(r);
         var arrayOfHashes = r;
         for (var i = 0; i < arrayOfHashes.length+1; i++) {
             getOnePost(arrayOfHashes[i], function(rep){

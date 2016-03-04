@@ -1,7 +1,7 @@
 document.getElementsByClassName('postButton')[0].addEventListener('click', blogPost);
 
 function blogPost(){
-    var title = document.getElementsByClassName('title')[0].value;
+    var title = document.getElementById('Title').value;
     var postArea = document.getElementsByClassName('postArea')[0].value;
     var xhr = new XMLHttpRequest();
     function post(title, postArea){
