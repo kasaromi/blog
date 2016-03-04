@@ -14,12 +14,12 @@ function getInfo(name, callback){
     });
 }
 
-function setPost(obj){
-    var date = 'date' + obj.date;
+function setPost(date, obj){
     var title = obj.titl;
     var post = obj.post;
     var author = obj.author;
-    client.hmset(date, 'title', title, 'post', post, 'author', author);
+    var time = obj.time;
+    client.hmset(date, 'title', title, 'post', post, 'author', author, 'time', time);
 }
 
 function getOnePost (hash, callback){
@@ -47,12 +47,7 @@ function getAllPosts(callback) {
             });
         }
     });
-    // console.log("string 2", arr);
 }
-
-// getAllPosts(function(data) {
-//     console.log(data);
-// });
 
 function getKeys(callback){
     client.keys('*', function(err, reply){
